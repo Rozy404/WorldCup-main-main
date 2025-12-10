@@ -1,0 +1,164 @@
+/* 전체 컨테이너 */
+.home-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+/* 제목 */
+.title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #e50914;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px black;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 40px;
+}
+
+/* 라운드 선택 */
+.round-box {
+  margin-bottom: 40px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  display: inline-block;
+  backdrop-filter: blur(5px);
+}
+
+.round-label {
+  font-size: 1.2rem;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.round-select {
+  padding: 8px 15px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+  cursor: pointer;
+}
+
+/* 장르 카드 그리드 */
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 🔥 고정 3개 */
+  gap: 30px; /* 카드 사이 거리 */
+  justify-content: center;
+}
+
+/* 카드 */
+.genre-card {
+  height: 300px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  background: #222;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+/* 카드 hover */
+.genre-card:hover {
+  transform: scale(1.03);
+  border: 2px solid #e50914;
+}
+
+.genre-card:hover .card-bg {
+  filter: brightness(0.3);
+  transform: scale(1.1);
+}
+
+/* 배경 */
+.card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s, filter 0.5s;
+}
+
+/* 카드 안의 내용 */
+.card-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.genre-name {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* 1위 뱃지 */
+.top-movie-badge {
+  margin-bottom: 20px;
+  background: rgba(229, 9, 20, 0.8);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* 버튼 그룹 */
+.btn-group {
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.3s ease;
+}
+
+/* 카드 hover 시 버튼 보이기 */
+.genre-card:hover .btn-group {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 버튼 */
+.btn-start,
+.btn-rank {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.btn-start {
+  background: #e50914;
+  color: white;
+}
+
+.btn-rank {
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: 2px solid white;
+}
+
+/* 버튼 hover 효과 */
+button:hover {
+  filter: brightness(1.2);
+  transform: scale(1.05);
+}

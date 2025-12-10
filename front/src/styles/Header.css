@@ -1,0 +1,61 @@
+/* 전체 헤더 */
+.header {
+  display: flex;
+  border-radius: 15px;
+  justify-content: space-between;
+  padding: 20px;
+  background: #141414;
+  color: white;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999; /* 항상 위로 */
+}
+
+/* 로고 */
+.logo {
+  text-decoration: none;
+  color: #e50914;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 네비게이션 */
+.nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* 로그인 전 버튼 */
+.login-btn {
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* 로그인 후 유저 정보 */
+.user-section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* 로그아웃 버튼 */
+.logout-btn {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}

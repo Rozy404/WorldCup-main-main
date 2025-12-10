@@ -1,0 +1,19 @@
+패들랫 링크 
+https://padlet.com/grovy04/padlet-74l5kd18a2a8dhk8
+
+프로그래밍 언어 연습할 수 있는 사이트
+https://www.w3schools.com/
+
+파일탐색기에서 절대경로 선택후 cmd 입력 -> code . 입력 -> vscode 실행 됨
+
+변수 한번에 바꾸고 싶을때
+바꾸고 싶은 변수 클릭 ctrl + d 다음 변수 ctrl + d ..... -> 수정
+
+Shortcuts
+  press r + enter to restart the server
+  press u + enter to show server url
+  press o + enter to open in browser
+  press c + enter to clear console
+  press q + enter to quit
+
+  
