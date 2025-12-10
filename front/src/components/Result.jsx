@@ -33,39 +33,43 @@ export default function Result({ movie, onRestart }) {
   }
 
   return (
-    <div className="result-container">
-      <h1 className="winner-title">🏆 최종 우승: {movie.name}</h1>
+    <div className="result-layout">
+      {/* ---------- 왼쪽: 우승 영화 ---------- */}
+      <div className="left-side">
+        <h1 className="winner-title">🏆 최종 우승: {movie.name}</h1>
 
-      <img className="winner-img" src={movie.img} alt={movie.name} />
+        <img className="winner-img" src={movie.img} alt={movie.name} />
 
-      {movie.overview && <p className="movie-overview">{movie.overview}</p>}
+        {movie.overview && <p className="movie-overview">{movie.overview}</p>}
+      </div>
 
-      <hr className="divider" />
+      {/* ---------- 오른쪽: AI 추천 영화 ---------- */}
+      <div className="right-side">
+        <h2 className="recommend-title">
+          🤖 '{movie.name}'을(를) 좋아하신다면?
+        </h2>
 
-      <h2 className="recommend-title">🤖 '{movie.name}'을(를) 좋아하신다면?</h2>
-
-      {loading ? (
-        <p className="loading-text">AI가 영화를 분석 중입니다... 🧠</p>
-      ) : (
-        <div className="recommend-list">
-          {recommendations.length > 0 ? (
-            recommendations.map((rec) => (
+        {loading ? (
+          <p className="loading-text">AI가 영화를 분석 중입니다... 🧠</p>
+        ) : recommendations.length > 0 ? (
+          <div className="recommend-list">
+            {recommendations.map((rec) => (
               <div className="recommend-item" key={rec.id}>
                 <img className="recommend-img" src={rec.img} alt={rec.title} />
                 <p className="recommend-name">{rec.title}</p>
               </div>
-            ))
-          ) : (
-            <p className="no-recommend">
-              추천할 비슷한 영화를 찾지 못했습니다 😢
-            </p>
-          )}
-        </div>
-      )}
+            ))}
+          </div>
+        ) : (
+          <p className="no-recommend">
+            추천할 비슷한 영화를 찾지 못했습니다 😢
+          </p>
+        )}
 
-      <button className="restart-btn" onClick={onRestart}>
-        다시하기
-      </button>
+        <button className="restart-btn" onClick={onRestart}>
+          다시하기
+        </button>
+      </div>
     </div>
   );
 }

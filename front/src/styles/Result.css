@@ -85,3 +85,30 @@
   border: none;
   border-radius: 30px;
 }
+.result-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.left-side {
+  width: 40%;
+  text-align: center;
+}
+
+.right-side {
+  width: 45%;
+}
+
+.recommend-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.recommend-title {
+  color: wheat;
+}
